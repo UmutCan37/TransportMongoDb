@@ -1,9 +1,11 @@
-﻿<section class="section mt-85">
+﻿@model List<ResultAboutDto>
+
+<section class="section mt-85">
     <div class="container">
         <div class="text-center">
             <img class="mb-15" src="/templates/assets/imgs/template/icons/favicon.svg" alt="transp">
-            <p class="font-md color-grey-700">Delivering Results for Industry Leaders</p>
-            <h2 class="color-brand-2 mb-65 mt-15">We are proud of our workforce<br class="d-none d-lg-block">and have worked hard.</h2>
+            <p class="font-md color-grey-700">Sektör Liderleri İçin Güvenilir Çözümler</p>
+            <h2 class="color-brand-2 mb-65 mt-15">Ekibimizle gurur duyuyoruz<br class="d-none d-lg-block">ve her gün daha iyisi için çalışıyoruz.</h2>
         </div>
         <div class="row mt-50 align-items-center">
             <div class="col-xl-7 col-lg-6 mb-30">
@@ -16,39 +18,43 @@
             </div>
             <div class="col-xl-5 col-lg-6 mb-30">
                 <div class="box-info-pround">
-                    <h3 class="color-brand-2 mb-15">Fast shipping with the most modern technology</h3>
-                    <p class="font-md color-grey-500">Over the years, we have worked together to expand our network of partners to deliver reliability and consistency. We’ve also made significant strides to tightly integrate technology with our processes, giving our clients greater visibility into every engagement.</p>
+                    @foreach(var item in Model)
+                    {
+                        <h3 class="color-brand-2 mb-15">@item.Title</h3>
+                        <p class="font-md color-grey-500">@item.Description</p>
+                    }
+                 
                     <div class="mt-30">
                         <ul class="list-ticks">
                             <li>
                                 <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>Task tracking
+                                </svg>Sevkiyat Takibi
                             </li>
                             <li>
                                 <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>Create task dependencies
+                                </svg>Operasyon Yönetimi
                             </li>
                             <li>
                                 <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>Task visualization
+                                </svg>Zamanında Teslimat Garantisi
                             </li>
                             <li>
                                 <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>hare files, discuss
+                                </svg>Entegre Süreç Planlama
                             </li>
                             <li>
                                 <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>Meet deadlines faster
+                                </svg>Dijital Evrak ve Anlık İletişim<
                             </li>
                             <li>
                                 <svg class="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>Track time spent on each project
+                                </svg>Teslimat Süresi ve Analizi
                             </li>
                         </ul>
                     </div>

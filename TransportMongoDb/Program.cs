@@ -1,11 +1,20 @@
 using Microsoft.Extensions.Options;
 using System.Reflection;
+using TransportMongoDb.Services.AboutService;
+using TransportMongoDb.Services.BrandService;
+using TransportMongoDb.Services.GetInTouchService;
+using TransportMongoDb.Services.OfferService;
 using TransportMongoDb.Services.SliderServices;
 using TransportMongoDb.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<IBrandService, BrandService>();
+builder.Services.AddScoped<IOfferService,OfferService >();
+builder.Services.AddScoped<IAboutService,AboutService >();
+builder.Services.AddScoped<IGetInTouchService,GetInTouchService >();
+
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
