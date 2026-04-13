@@ -1,10 +1,18 @@
+using DatabaseMastery.TransportMongoDb.Services.ShipmentTrackingServices;
 using Microsoft.Extensions.Options;
 using System.Reflection;
+using TransportMongoDb.Entities;
 using TransportMongoDb.Services.AboutService;
 using TransportMongoDb.Services.BrandService;
 using TransportMongoDb.Services.GetInTouchService;
+using TransportMongoDb.Services.HowItWorkServices;
 using TransportMongoDb.Services.OfferService;
+using TransportMongoDb.Services.ProjectSectionService;
+using TransportMongoDb.Services.QuestionService;
+using TransportMongoDb.Services.ShipmentServices;
+using TransportMongoDb.Services.ShipmentTrackingServices;
 using TransportMongoDb.Services.SliderServices;
+using TransportMongoDb.Services.TestimonialService;
 using TransportMongoDb.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +22,15 @@ builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<IOfferService,OfferService >();
 builder.Services.AddScoped<IAboutService,AboutService >();
 builder.Services.AddScoped<IGetInTouchService,GetInTouchService >();
+builder.Services.AddScoped<IHowItWorkService, HowItWorkService>();
+builder.Services.AddScoped<ITestimonialService, TestimonialService>();
+builder.Services.AddScoped<IProjectSectionService, ProjectSectionService>();
+builder.Services.AddScoped<IQuestionService, QuestionService>();
+builder.Services.AddScoped<IShipmentService, ShipmentService>();
+builder.Services.AddScoped<IShipmentTrackingService, ShipmentTrackingService>();
+
+
+
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

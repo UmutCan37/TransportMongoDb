@@ -1,0 +1,14 @@
+﻿using TransportMongoDb.Dtos.ProjectSectionDtos;
+using TransportMongoDb.Entities;
+
+namespace TransportMongoDb.Services.ProjectSectionService
+{
+    public interface IProjectSectionService
+    {
+        Task<List<ResultProjectSectionDto>> GetAllProjectSectionAsync();
+        Task CreateProjectSectionAsync(CreateProjectSectionDto createProjectSectionDto);
+        Task UpdateProjectSectionAsync(UpdateProjectSectionDto updateProjectSectionDto);
+        Task<GetProjectSectionByIdDto> GetProjectSectionByIdAsync(string id);
+        Task DeleteProjectSectionAsync(string id);
+    }
+}
